@@ -23,6 +23,7 @@ This repository contains a **Gradient Boosting Machine Learning model** that pre
 3. **Model Training**: A **Gradient Boosting Regressor** is trained using 2024 race results.
 4. **Prediction**: The model predicts race times for 2025 and ranks drivers accordingly.
 5. **Evaluation**: Model performance is measured using **Mean Absolute Error (MAE)**.
+6. **Advanced ML Final Prediction**: The crown jewel `predictionFINAL.py` incorporates a dedicated `RandomForestRegressor` and a **Clutch Factor** feature to accurately model high-stakes, title-decider performances (e.g., Lando Norris's clutch P3 at Abu Dhabi).
 
 ### Dependencies
 - `fastf1`
@@ -35,16 +36,19 @@ This repository contains a **Gradient Boosting Machine Learning model** that pre
 - For every race the end of the file will be numbered in correlation to the race on the calendar, ex. prediction1 - Australia, prediction2 - China, etc.
 
 ## 🔧 Usage
-Run the prediction script:
+Run the advanced final prediction script:
 ```bash
-python3 prediction1.py
+python predictionFINAL.py
 ```
 Expected output:
 ```
-🏁 Predicted 2025 Australian GP Winner 🏁
-Driver: Charles Leclerc, Predicted Race Time: 82.67s
 ...
-🔍 Model Error (MAE): 3.22 seconds
+🏁 FINAL ML PREDICTION - 2025 ABU DHABI GRAND PRIX 🏁
+======================================================================
+🥇 P1: VER
+🥈 P2: PIA
+🥉 P3: NOR  <-- *Correctly predicted via high ClutchFactor*
+...
 ```
 
 ## 📈 Model Performance
